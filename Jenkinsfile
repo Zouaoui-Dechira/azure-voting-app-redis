@@ -2,15 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('verified branch stage') {
             steps {
-                echo 'Hello World'
+                echo $GIT_BRANCH
             }
         }
-         stage('Good Bye') {
-            steps {
-                echo 'Good Bye World'
-            }
-        }
+         
     }
 }
